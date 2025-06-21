@@ -1,1 +1,10 @@
-<p>cards works!</p>
+<!-- <p>test</p> -->
+<div class="cards">
+    <div class="container">
+        @for (item of products; track $index) {
+        <div class="card">
+            <app-card [products]="item" />
+        </div>
+    }
+    </div>
+</div>

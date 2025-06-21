@@ -1,0 +1,11 @@
+.conatiner{
+    display: flex;
+    flex-direction: column;
+}
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* ← عدد السطور */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
