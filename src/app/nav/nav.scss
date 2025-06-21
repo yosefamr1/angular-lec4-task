@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    padding: 1rem 0;
+    background-color: rgb(155, 155, 155);
+}
+.buttons{
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+}
+button{
+    padding: 5px;
+    border: none;
+    border-radius: 2rem;
+}

@@ -1,10 +1,11 @@
 import { Component, Input, input, OnInit, signal } from '@angular/core';
 import { HTTP } from '../http';
 import { Card } from '../card/card';
+import { Nav } from "../nav/nav";
 
 @Component({
   selector: 'app-cards',
-  imports: [Card],
+  imports: [Card, Nav],
   templateUrl: './cards.html',
   styleUrl: './cards.scss'
 })
