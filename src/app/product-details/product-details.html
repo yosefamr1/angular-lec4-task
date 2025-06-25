@@ -1,0 +1,17 @@
+<section class="details">
+    <div class="container">
+        <figure>
+            <img src="{{product.images[0]}}" alt="">
+        </figure>
+        <div class="text">
+           <h1> {{product.title}}</h1>
+           <h3> {{product.description}}</h3>
+           <h2> {{product.price}}</h2>
+           @if ( product.stock>0) {
+
+               <h2 class="instock"> in stock</h2>
+           }@else {               <h2 class="outstock"> out of stock</h2>
+}
+        </div>
+    </div>
+</section>

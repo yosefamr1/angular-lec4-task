@@ -11,4 +11,8 @@ export class HTTP {
   getproducts(){
     return this.http.get(`https://dummyjson.com/products`);
   }
+  getProductById(id: any) {
+  return this.http.get(`https://dummyjson.com/products/${id}`);
+}
+
 }
