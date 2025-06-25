@@ -1,1 +1,4 @@
 <p>cart works!</p>
+@for (item of cartitems; track $index) {
+    <img src="{{item.images[0]}}" alt="">
+}

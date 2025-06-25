@@ -1,5 +1,6 @@
 import { Component, Input, input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Cartservice } from '../cartservice';
 
 @Component({
   selector: 'app-card',
@@ -8,5 +9,14 @@ import { RouterModule } from '@angular/router';
   styleUrl: './card.scss'
 })
 export class Card {
-@Input() products:any
+@Input() products:any;
+
+constructor(private cartservice:Cartservice){}
+
+addToCart() {
+    // event.stopPropagation(); 
+    this.cartservice.addtocart(this.products)
+  }
+
+
 }
