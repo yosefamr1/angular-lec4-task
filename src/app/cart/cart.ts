@@ -9,13 +9,22 @@ import { Cartservice } from '../cartservice';
 export class Cart implements OnInit {
 cartitems:any[]=[];
 
-constructor(private cartservice:Cartservice){}
+constructor(private cartService:Cartservice){}
 ngOnInit() {
-this.cartitems=this.cartservice.getcartitems()
-console.log(this.cartitems);
-
+this.cartitems=this.cartService.getcartitems()
 }
 
+removeItem(id: number) {
+    this.cartService.removeFromCart(id);
+  }
+
+  increase(id: number) {
+    this.cartService.increaseQuantity(id);
+  }
+
+  decrease(id: number) {
+    this.cartService.decreaseQuantity(id);
+  }
 
 
 }

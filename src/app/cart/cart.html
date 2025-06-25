@@ -1,4 +1,35 @@
-<p>cart works!</p>
-@for (item of cartitems; track $index) {
-    <img src="{{item.images[0]}}" alt="">
-}
+<!-- @for (item of cartitems; track $index) {
+<img src="{{item.images[0]}}" alt="">
+} -->
+
+<section class="cart">
+    <div class="container">
+        <div class="header">Cart</div>
+        @if (cartitems.length==0) {
+        <div class="Empty">Empty !</div>
+        }@else {
+        @for (product of cartitems; track $index) {
+        <div class="item">
+            <div class="item_description">
+                <div class="item-img"><img src="{{ product.images}}" alt=""></div>
+                <div class="item-text">
+                    <p>{{product.title}}</p>
+                    <p> product id: {{product.id}}</p>
+                </div>
+            </div>
+            <div class="item_sitting">
+                <button class="plus_btn">+</button>
+
+                <p>{{product.quantity}}</p>
+
+                <button class="minus_btn">-</button>
+
+                <button ">Remove</button>
+
+            </div>
+        </div>
+        }
+        }
+
+    </div>
+</section>
