@@ -1,4 +1,5 @@
 .details {
+  margin-top: 2.5rem;
   color: rgb(187, 185, 185);
   height: 100vh;
   display: flex;
@@ -64,4 +65,13 @@
     background-color: #1e1e1e;
     padding: 0.5rem;
     border-radius: 1rem;
+}
+
+button:hover{
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+a:hover{
+    cursor: pointer;
+    letter-spacing: 3px;
 }

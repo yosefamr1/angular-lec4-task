@@ -7,24 +7,50 @@
       background-color: rgb(155, 155, 155);
     }
     .item {
+      width: 100%;
       background-color:  rgb(86, 92, 97);
       align-items: center;
       display: flex;
       flex-direction: row;
       padding: 1rem 2rem;
       border-bottom: 2px solid white;
-
-      .item_description {
-        display: flex;
-        width: 60%;
-        .item-img {
-          width: 3rem;
-          height: 3rem;
-        }
-      }
+    }
+      
     }
     .Empty {
       padding: 2rem;
     }
   }
+
+.item_description{
+    display: flex
+;
+    width: 100%;
+    align-items: center;
+}
+.item-img{
+    height: 5rem;
+    width: 5rem;
+}
+.item-text{
+  width: 89%;
+}
+.price {
+  color: #00ff2d;
+  border: none;
+  border-radius: 2rem;
+  background-color: rgb(0 0 0);
+  padding: 10px;
+}
+#view{
+    color: wheat;
+    background-color: #1e1e1e;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+.sittings{
+  width: 19%;
+  display: flex;
+  justify-content: space-between;
 }

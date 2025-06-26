@@ -18,3 +18,16 @@ button{
     border: none;
     border-radius: 2rem;
 }
+a{
+    text-decoration: none;
+    color: #40341c;
+    font-size: 1.5rem;
+}
+
+a:hover{
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+.counter{
+    margin-left: -8px;
+}

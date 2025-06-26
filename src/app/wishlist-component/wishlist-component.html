@@ -1,8 +1,7 @@
-
 <section class="wish">
     <div class="container">
-         <div class="header">Wishlist</div>
-   @for (item of wisharr; track $index) {
+        <div class="header">Wishlist</div>
+        @for (item of wisharr; track $index) {
         <div class="item">
             <div class="item_description">
                 <div class="item-img"><img src="{{ item.images[0]}}" alt=""></div>
@@ -10,11 +9,17 @@
                     <p>{{item.title}}</p>
                     <p> product id: {{item.id}}</p>
                 </div>
+                <div class="sittings">
+
+                    <div class="price">{{item.price}} $</div>
+                    <a id="view" [routerLink]="['/product', item.id]">View Details</a>
+                </div>
+
             </div>
-            
+
         </div>
         }
-        
+
 
     </div>
 </section>
