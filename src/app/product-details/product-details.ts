@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HTTP } from '../http';
 import { ActivatedRoute } from '@angular/router';
+import { Cartservice } from '../cartservice';
 
 @Component({
   selector: 'app-product-details',
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetails {
   product: any;
 
-  constructor(private httpServicen: HTTP, private route: ActivatedRoute) {}
+  constructor(private httpServicen: HTTP, private route: ActivatedRoute,private cartservice:Cartservice) {}
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -22,4 +23,13 @@ export class ProductDetails {
       });
     }
   }
+
+
+
+
+addToCart() {
+    // event.stopPropagation(); 
+    this.cartservice.addtocart(this.product)
+  }
+  
 }

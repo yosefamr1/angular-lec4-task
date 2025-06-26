@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Cartservice } from '../cartservice';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-cart',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './cart.html',
   styleUrl: './cart.scss',
 })
@@ -26,6 +27,10 @@ export class Cart implements OnInit {
   decrease(id: number) {
     this.cartService.decreaseQuantity(id);
   }
+  getTotalFromItems(): number {
+  return this.cartitems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+}
+
 
    
   ////////////////////to test ui only/////////////

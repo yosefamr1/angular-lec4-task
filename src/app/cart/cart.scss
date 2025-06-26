@@ -46,23 +46,31 @@
   text-align: center;
 }
 .price {
-    color: #00ff2d;
-    border: none;
-    border-radius: 2rem;
-    background-color: rgb(0 0 0);
-    padding: 10px;
+  color: #00ff2d;
+  border: none;
+  border-radius: 2rem;
+  background-color: rgb(0 0 0);
+  padding: 10px;
 }
 .footer {
   display: flex;
   padding: 1rem;
   background-color: aliceblue;
-.text{
+  align-items: center;
 
-  width: 50%;
-  text-align: center;
-}
-.totalprice{
-  width: 50%;
-  text-align: center;
-}
+  .text {
+    width: 50%;
+    text-align: center;
+  }
+  .totalprice {
+    width: 50%;
+    text-align: center;
+    h3 {
+      color: #00ff2d;
+      border: none;
+      border-radius: 2rem;
+      background-color: rgb(0, 0, 0);
+      padding: 10px;
+    }
+  }
 }

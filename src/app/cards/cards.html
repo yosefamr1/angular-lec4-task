@@ -3,11 +3,13 @@
 
 <div class="cards">
     <div class="container">
+        <div class="header">
+            <h2>Welcome to our shopping website, start browsing</h2>
+        </div>
         @for (item of products; track $index) {
         <div class="card">
             <app-card [products]="item" />
         </div>
-    }
+        }
     </div>
 </div>
-

@@ -4,14 +4,17 @@
             <img src="{{product.images[0]}}" alt="">
         </figure>
         <div class="text">
-           <h1> {{product.title}}</h1>
-           <h3> {{product.description}}</h3>
-           <h2> {{product.price}}</h2>
-           @if ( product.stock>0) {
-
-               <h2 class="instock"> in stock</h2>
-           }@else {               <h2 class="outstock"> out of stock</h2>
-}
+            <h1 id="title"> {{product.title}}</h1>
+            <h3> {{product.description}}</h3>
+            <h2 id="price"> {{product.price}} $</h2>
+            @if ( product.stock>0) {
+            <h2 class="instock"> in stock</h2>
+            }@else { <h2 class="outstock"> out of stock</h2>
+            }
+            <p> only {{product.stock}} left in stock</p>
+            <h3><span class="category">category:</span> {{product.brand}}</h3>
+            <h3><span class="brand">brand:</span> {{product.brand}}</h3>
+            <button (click)="addToCart()" class="addtocart-btn">Add To Cart</button>
         </div>
     </div>
 </section>
