@@ -1,12 +1,13 @@
 .cart {
   margin-top: 10rem;
   .container {
-    background-color: rgb(52, 122, 184);
+    background-color: rgb(86, 92, 97);
     .header {
       padding: 1rem;
       background-color: aliceblue;
     }
     .item {
+      align-items: center;
       display: flex;
       flex-direction: row;
       padding: 1rem 2rem;
@@ -24,4 +25,44 @@
       padding: 2rem;
     }
   }
+}
+.item_sitting {
+  align-items: center;
+  width: 39%;
+  display: flex;
+  justify-content: space-around;
+}
+.quantity-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 2rem;
+  width: 3rem;
+  text-align: center;
+}
+.remove-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+}
+.price {
+    color: #00ff2d;
+    border: none;
+    border-radius: 2rem;
+    background-color: rgb(0 0 0);
+    padding: 10px;
+}
+.footer {
+  display: flex;
+  padding: 1rem;
+  background-color: aliceblue;
+.text{
+
+  width: 50%;
+  text-align: center;
+}
+.totalprice{
+  width: 50%;
+  text-align: center;
+}
 }

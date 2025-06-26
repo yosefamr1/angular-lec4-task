@@ -18,18 +18,26 @@
                 </div>
             </div>
             <div class="item_sitting">
-                <button class="plus_btn">+</button>
+                <button (click)="increase(product.id)" class="quantity-btn">+</button>
 
                 <p>{{product.quantity}}</p>
 
-                <button class="minus_btn">-</button>
+                <button (click)="decrease(product.id)" class="quantity-btn">-</button>
 
-                <button>Remove</button>
-
+                <button (click)="removeItem(product.id)" class="remove-btn">Remove</button>
+                <div class="price">{{product.price}} $</div>
             </div>
         </div>
         }
         }
+        <div class="footer">
+            <div class="text">
+                <h3>Total</h3>
+            </div>
+            <div class="totalprice">
+                <h3>{{totalprice}}</h3>
+            </div>
+        </div>
 
     </div>
 </section>

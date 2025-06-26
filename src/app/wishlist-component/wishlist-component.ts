@@ -10,4 +10,6 @@ import { WishStore } from '../store/wish.store';
 export class WishlistComponent {
   wish = inject(WishStore);
   wisharr= this.wish.wisharr()
+
+  
 }
