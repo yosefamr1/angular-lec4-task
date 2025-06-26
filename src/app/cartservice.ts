@@ -21,6 +21,25 @@ export class Cartservice {
     }
   }
  
+
+
+
+
+  isInCart(productId: string | number): boolean {
+    return this.cart.some((p) => p.id === productId);
+  }
+
+  toggleProduct(event: Event, product: any) {
+    event.stopPropagation();
+    if (this.isInCart(product.id)) {
+      this.removeFromCart(product.id);
+    } else {
+      this.addtocart(product);
+    }
+  }
+
+
+
   removeFromCart(id: number) {
     this.cart = this.cart.filter((item) => item.id !== id);
     
@@ -38,7 +57,7 @@ export class Cartservice {
     }
   }
 
-  clearCart() {
-    this.cart = [];
-  }
+  // clearCart() {
+  //   this.cart = [];
+  // }
 }

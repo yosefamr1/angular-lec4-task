@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HTTP } from '../http';
 import { ActivatedRoute } from '@angular/router';
 import { Cartservice } from '../cartservice';
+import { event } from '@ngrx/signals/events';
 
 @Component({
   selector: 'app-product-details',
@@ -12,7 +13,7 @@ import { Cartservice } from '../cartservice';
 export class ProductDetails {
   product: any;
 
-  constructor(private httpServicen: HTTP, private route: ActivatedRoute,private cartservice:Cartservice) {}
+  constructor(private httpServicen: HTTP, private route: ActivatedRoute,public  cartservice:Cartservice) {}
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -27,9 +28,10 @@ export class ProductDetails {
 
 
 
-addToCart() {
-    // event.stopPropagation(); 
-    this.cartservice.addtocart(this.product)
-  }
+toggleProduct(event: Event) {
+  this.cartservice.toggleProduct(event, this.product);
+}
+
   
 }
+

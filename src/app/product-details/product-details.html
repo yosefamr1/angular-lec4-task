@@ -14,7 +14,11 @@
             <p> only {{product.stock}} left in stock</p>
             <h3><span class="category">category:</span> {{product.brand}}</h3>
             <h3><span class="brand">brand:</span> {{product.brand}}</h3>
-            <button (click)="addToCart()" class="addtocart-btn">Add To Cart</button>
+            <!-- <button (click)="toggleProduct()" class="addtocart-btn">Add To Cart</button> -->
+            <button (click)="toggleProduct($event)" class="addtocart-btn">
+                {{ cartservice.isInCart(product.id) ? 'Remove From Cart' : 'Add To Cart' }}
+            </button>
+
         </div>
     </div>
 </section>
