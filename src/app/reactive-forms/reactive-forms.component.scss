@@ -1,0 +1,49 @@
+.reactive-forms{
+  margin-top: 8rem;
+}
+
+.container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  form {
+    border-radius: 2rem;
+    margin: auto;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgb(128, 128, 128);
+
+    .input-div {
+      margin: auto;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      input {
+        background-color: rgb(149, 165, 165);
+        border-radius: 1rem;
+        padding: 10px;
+      }
+    }
+    small {
+      color: red;
+    }
+    .button-div {
+      text-align: center;
+      button {
+        &:disabled {
+          opacity: 0.5;
+        };
+        color: white;
+        background-color: rgb(48, 48, 48);
+        padding: 0.5rem 2rem;
+        border-radius: 2rem;
+        &:hover {
+        cursor: pointer;
+        // background-color: rgb(82, 82, 82);
+      }
+      }
+      
+    }
+  }
+}

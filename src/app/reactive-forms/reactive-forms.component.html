@@ -1,0 +1,49 @@
+<section class="reactive-forms">
+    <div class="container">
+        <form [formGroup]="myform" (ngSubmit)="submit()">
+            <div class="input-div">
+                <label for="name">Name</label>
+                <input type="text" name="name" formControlName="name">
+                @if(myform.get('name')?.touched && myform.get('name')?.errors){
+                @if(myform.get('name')?.getError('required')){
+                <small>This Field is Required</small>
+                }
+                }
+            </div>
+            <div class="input-div">
+                <label for="username">User Name</label>
+                <input type="text" name="username" formControlName="username">
+                @if(myform.get('username')?.touched && myform.get('username')?.errors){
+                @if(myform.get('username')?.getError('pattern')){
+                <small>User Name Should be without spaces</small>
+                } @if(myform.get('username')?.getError('required')){
+                <small>This Field is Required</small>
+                } }
+            </div>
+            <div class="input-div">
+                <label for="email">Email address</label>
+                <input type="email" name="email" formControlName="email">
+                @if(myform.get('email')?.touched && myform.get('email')?.errors){
+                @if(myform.get('email')?.getError('required')){
+                <small>This Field is Required</small>
+                } @if(myform.get('email')?.getError('pattern')){
+                <small>This email is not a valid format</small>
+                } }
+            </div>
+            <div class="input-div">
+                <label for="password">Password</label>
+                <input type="password" name="password" formControlName="password">
+                @if(myform.get('password')?.touched && myform.get('password')?.errors){
+                @if(myform.get('password')?.getError('required')){
+                <small>This Field is Required</small>
+                } @if(myform.get('password')?.getError('pattern')){
+                <small> password length not less than 8 characters , contains at
+                    least one lowercase , one uppercase , at least one digit and special character</small>
+                } }
+            </div>
+            <div class="button-div">
+                <button [disabled]="!myform.valid">Register</button>
+            </div>
+        </form>
+    </div>
+</section>
