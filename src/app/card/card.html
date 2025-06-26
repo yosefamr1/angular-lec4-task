@@ -8,14 +8,30 @@
       <div class="product_text">
          <h2>{{products.title}}</h2>
          <p class="description">{{products.description}}</p>
-         <!-- <button>add to cart</button> -->
-         <button (click)="addToCart()">Add to Cart</button>
+      </div>
+      <div class="buttons">
 
+         <!-- <button>add to cart</button> -->
+         <button (click)="toggleProduct($event)" class="addtocart-btn">
+            {{ cartservice.isInCart(products.id) ? 'Remove From Cart' : 'Add To Cart' }}
+         </button>
          <!-- <a routerLink="/product/:id">view detailes</a> -->
-         <a [routerLink]="['/product', products.id]">View Details</a>
-         <button (click)="wish.addtowish(products)">Add to wish</button>
+         <!-- <a [routerLink]="['/product', products.id]">View Details</a> -->
+         <!-- <button (click)="wish.addtowish(products)">Add to wish</button> -->
+         <!-- <button (click)="togglewish($event)"">
+            {{ wish.isinwish(products.id) ? <i class="fa-solid fa-heart"></i> : <i class="fa-solid fa-heart-circle-check"></i> }}
+         </button> -->
+         <button (click)="toggleWish($event, products)" class="wishlist-btn">
+  @if (!isInWish(products.id)) {
+    <i class="fa-solid fa-heart"></i>
+  } @else {
+    <i class="fa-solid fa-heart-circle-check"></i>
+  }
+</button>
 
 
       </div>
+
+
    </div>
 </section>

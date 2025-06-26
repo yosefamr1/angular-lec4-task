@@ -1,16 +1,19 @@
 .wish {
   margin-top: 10rem;
   .container {
-    background-color: rgb(52, 122, 184);
+    background-color:  rgb(86, 92, 97);
     .header {
       padding: 1rem;
-      background-color: aliceblue;
+      background-color: rgb(155, 155, 155);
     }
     .item {
+      background-color:  rgb(86, 92, 97);
+      align-items: center;
       display: flex;
       flex-direction: row;
       padding: 1rem 2rem;
       border-bottom: 2px solid white;
+
       .item_description {
         display: flex;
         width: 60%;

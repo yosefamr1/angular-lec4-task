@@ -2,6 +2,7 @@ import { Component, Input, input, OnInit, signal } from '@angular/core';
 import { HTTP } from '../http';
 import { Card } from '../card/card';
 import { Nav } from "../nav/nav";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
@@ -11,7 +12,7 @@ import { Nav } from "../nav/nav";
 })
 export class Cards implements OnInit {
  products:any[] = [];
-constructor(private httpServicen:HTTP){}
+constructor(private httpServicen:HTTP, private router: Router){}
 
 ngOnInit(){
 this.httpServicen.getproducts().subscribe({
@@ -19,6 +20,9 @@ this.httpServicen.getproducts().subscribe({
 })
 }
 
+goToDetails(id: number) {
+  this.router.navigate(['/product', id]);
+}
 
 
 

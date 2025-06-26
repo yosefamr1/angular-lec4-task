@@ -6,16 +6,13 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 10px;
+    gap: 2.5rem 1rem;
     justify-content: center;
 }
 
 .card {
-    border-radius: 2rem;
-    margin-top: 3rem;
-    background-color: rgb(155, 155, 155);
-    width: 30%;
-    height: 30rem;
+     width: 30%;
+  height: 38rem;
 }
 .header {
     text-align: center;

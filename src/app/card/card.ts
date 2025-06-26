@@ -12,7 +12,7 @@ import { WishStore } from '../store/wish.store';
 export class Card {
 @Input() products:any;
 
-constructor(private cartservice:Cartservice){}
+constructor(public cartservice:Cartservice){}
 
 addToCart() {
     // event.stopPropagation(); 
@@ -21,5 +21,16 @@ addToCart() {
 
   wish = inject(WishStore);
 
+toggleProduct(event: Event) {
+  this.cartservice.toggleProduct(event, this.products);
+}
+
+ toggleWish(event: Event, product: any) {
+    this.wish.toggleProduct(event, product);
+  }
+
+  isInWish(productId: number): boolean {
+    return this.wish.isInwish(productId);
+  }
 
 }
