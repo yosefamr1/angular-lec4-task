@@ -1,6 +1,7 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, inject, Input, input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Cartservice } from '../cartservice';
+import { WishStore } from '../store/wish.store';
 
 @Component({
   selector: 'app-card',
@@ -17,6 +18,8 @@ addToCart() {
     // event.stopPropagation(); 
     this.cartservice.addtocart(this.products)
   }
+
+  wish = inject(WishStore);
 
 
 }

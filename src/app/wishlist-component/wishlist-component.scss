@@ -1,0 +1,27 @@
+.wish {
+  margin-top: 10rem;
+  .container {
+    background-color: rgb(52, 122, 184);
+    .header {
+      padding: 1rem;
+      background-color: aliceblue;
+    }
+    .item {
+      display: flex;
+      flex-direction: row;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid white;
+      .item_description {
+        display: flex;
+        width: 60%;
+        .item-img {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+    .Empty {
+      padding: 2rem;
+    }
+  }
+}

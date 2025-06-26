@@ -11,4 +11,8 @@ export const routes: Routes = [
   },
   { path: 'product/:id', loadComponent: () => import('./product-details/product-details').then((m) => m.ProductDetails),
     pathMatch:"full",},
+  {
+    path: 'wish',loadComponent: () => import('./wishlist-component/wishlist-component').then((m) => m.WishlistComponent),
+    pathMatch:"full",
+  },  
 ];
